@@ -1,7 +1,10 @@
 # DockerExample
 Example to create a docker build
 
-$ sudo docker build -t jhebeler/jwhregression:1.0 .  # But builds only for your default architecture and places in your local (host) repository
+$ docker build -t jhebeler/jwhregression:1.0 .  # But builds only for your default architecture and places in your local (host) repository
+$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .
+$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .
+$ docker push jhebeler/jwhregression:3.0 
 
 # for mulitple
     $ sudo docker buildx create --name mybuilder --driver docker-container --bootstrap
