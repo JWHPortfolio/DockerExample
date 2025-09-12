@@ -1,18 +1,18 @@
 # DockerExample
-Example to create a docker build
+Example to create a docker build <br>
 
-$ docker build -t jhebeler/jwhregression:1.0 .  # But builds only for your default architecture and places in your local (host) repository
-$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .
-$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .
-$ docker push jhebeler/jwhregression:3.0 
+$ docker build -t jhebeler/jwhregression:1.0 .  # But builds only for your default architecture and places in your local (host) repository<br>
+$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .<br>
+$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .<br>
+$ docker push jhebeler/jwhregression:3.0 <br>
 
-# for mulitple
-    $ sudo docker buildx create --name mybuilder --driver docker-container --bootstrap
-    $ sudo docker run --privileged --rm tonistiigi/binfmt --install all
-    $ sudo docker buildx build -t jhebeler/jwhregression:2.0 .
+# for mulitple<br>
+    $ sudo docker buildx create --name mybuilder --driver docker-container --bootstrap<br>
+    $ sudo docker run --privileged --rm tonistiigi/binfmt --install all<br>
+    $ sudo docker buildx build -t jhebeler/jwhregression:2.0 .<br>
 
-    # look in local repostiory
-    $ sudo docker images
+    # look in local repostiory<br>
+    $ sudo docker images<br>
 
 # output to a remote image repository such as hub.docker.com
 $ docker login # and follow directions
