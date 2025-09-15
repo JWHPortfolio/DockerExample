@@ -58,13 +58,13 @@ Here are some basic Docker images commonly used in the FROM clause:
 
         FROM node:lts-alpine
 
-Python. 
+    Python. 
         FROM python:3.9-slim-buster
 
-java. 
+    java. 
         FROM openjdk:11-jre-slim
 
-go. 
+    go. 
         FROM golang:1.20-alpine
 
 • Scratch: The smallest possible base image, essentially an empty image. It's used for building truly minimal images from scratch, typically for statically compiled binaries. 
