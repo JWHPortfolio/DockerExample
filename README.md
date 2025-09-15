@@ -26,9 +26,9 @@
     $ sudo docker images>
 
 ## output to a remote image repository such as hub.docker.com 
-$ docker login 
-# and follow directions 
-$ docker push jhebeler/regression:1.0
+    $ docker login 
+    # and follow directions 
+    $ docker push jhebeler/regression:1.0
 
 
 
