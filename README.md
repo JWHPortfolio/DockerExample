@@ -79,8 +79,5 @@ Considerations when choosing a base image:
 • Maintainability: Official images are generally well-maintained and regularly updated. 
 • Multi-stage builds: Utilize different base images for build and runtime stages to optimize the final image size. 
 
-AI responses may include mistakes.
-
-
 
 ---
