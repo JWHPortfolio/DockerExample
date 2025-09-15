@@ -73,11 +73,11 @@ Here are some basic Docker images commonly used in the FROM clause:
 
 Considerations when choosing a base image: 
 
-• Application requirements: The libraries and dependencies your application needs. 
-• Image size: Smaller images lead to faster builds, pulls, and reduced storage. 
-• Security: Minimal base images often have a smaller attack surface. 
-• Maintainability: Official images are generally well-maintained and regularly updated. 
-• Multi-stage builds: Utilize different base images for build and runtime stages to optimize the final image size. 
+    • Application requirements: The libraries and dependencies your application needs. 
+    • Image size: Smaller images lead to faster builds, pulls, and reduced storage. 
+    • Security: Minimal base images often have a smaller attack surface. 
+    • Maintainability: Official images are generally well-maintained and regularly updated. 
+    • Multi-stage builds: Utilize different base images for build and runtime stages to optimize the final image size. 
 
 
 ---
