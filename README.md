@@ -1,24 +1,36 @@
+# [Nice Overview Site](https://dockerlabs.collabnix.com/docker/cheatsheet/)
+
+# Look over existing images
+### [RabbitMQ](https://hub.docker.com/_/rabbitmq)
+### [MongoDB](https://hub.docker.com/r/mongodb/mongodb-community-server)
+### [Neo4J](https://hub.docker.com/_/neo4j)
+
 # DockerExample
-Example to create a docker build <br>
 
-$ docker build -t jhebeler/jwhregression:1.0 .  # But builds only for your default architecture and places in your local (host) repository<br>
-$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .<br>
-$ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 .<br>
-$ docker push jhebeler/jwhregression:3.0 <br>
+## Example to create a docker build 
 
-# for mulitple<br>
-    $ sudo docker buildx create --name mybuilder --driver docker-container --bootstrap<br>
-    $ sudo docker run --privileged --rm tonistiigi/binfmt --install all<br>
-    $ sudo docker buildx build -t jhebeler/jwhregression:2.0 .<br>
+    $ docker build -t jhebeler/jwhregression:1.0 
+    But builds only for your default architecture and places in your local (host) repository 
+    $ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 . 
+    $ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 . 
+    $ docker push jhebeler/jwhregression:3.0 
+    $ docker run jhebeler/jwhregression:1.0 
+    $ docker run -v /home/jwh/workspace/DockerExample/output:output jhebeler/jwhregression:1:0
 
-    # look in local repostiory<br>
-    $ sudo docker images<br>
+## for mulitple -  Warning after much toil counldn't get this to work!
+    $ sudo docker buildx create --name mybuilder --driver docker-container --bootstrap
+    $ sudo docker run --privileged --rm tonistiigi/binfmt --install all
+    $ sudo docker buildx build -t jhebeler/jwhregression:2.0 .
 
-# output to a remote image repository such as hub.docker.com
-$ docker login # and follow directions
+## look in local repostiory
+    $ sudo docker images>
+
+## output to a remote image repository such as hub.docker.com 
+$ docker login 
+# and follow directions 
 $ docker push jhebeler/regression:1.0
 
-[Nice Overview Site](https://dockerlabs.collabnix.com/docker/cheatsheet/)
+
 
 Popular Base images to build an new docker image in the "from" clause in a dockerfile:
 
