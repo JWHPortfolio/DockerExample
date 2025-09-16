@@ -5,7 +5,23 @@
 ### [MongoDB](https://hub.docker.com/r/mongodb/mongodb-community-server)
 ### [Neo4J](https://hub.docker.com/_/neo4j)
 
-# DockerExample
+## key options
+    -v ties two files systems together.  Can use a host file system or shared file system
+    -p exposes container port to host.  They do not have to be the same port
+
+## Add shared file system
+    $ docker volume create my-shared-data
+    $ docker run -d --name container1 -v my-shared-data:/data <imageName1>
+    $ docker run -d --name container2 -v my-shared-data:/data <imageName2> (could be same image but a different container)
+    $ docker volume ls (list volumes)
+
+## Add shared network
+    $ docker network create my-app-network
+    $ docker run -d --name container3 --network my-app-network <imageName>
+    $ docker run -d --name container4 --network my-app-network <imageName>
+    $ docker network ls (list networks)
+
+# Docker Image Building Example
 
 ## Example to create a docker build 
 
@@ -17,19 +33,18 @@
     $ docker run jhebeler/jwhregression:1.0 
     $ docker run -v /home/jwh/workspace/DockerExample/output:output jhebeler/jwhregression:1:0
 
-## for mulitple -  Warning after much toil counldn't get this to work!
+## for multiple -  Warning after much toil counldn't get this to work!
     $ sudo docker buildx create --name mybuilder --driver docker-container --bootstrap
     $ sudo docker run --privileged --rm tonistiigi/binfmt --install all
     $ sudo docker buildx build -t jhebeler/jwhregression:2.0 .
 
 ## look in local repostiory
-    $ sudo docker images>
+    $ sudo docker images
 
 ## output to a remote image repository such as hub.docker.com 
     $ docker login 
     # and follow directions 
     $ docker push jhebeler/regression:1.0
-
 
 
 Popular Base images to build an new docker image in the "from" clause in a dockerfile:
