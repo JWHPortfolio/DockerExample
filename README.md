@@ -7,6 +7,7 @@
 
 # Other Repositories
 ### [Nvidia](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=)
+### [Tensorflow JupyterNotebook with GPU](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/running.html)
 ### [Azure ACR](https://azure.microsoft.com/en-us/products/container-registry)
 
 ## key options
