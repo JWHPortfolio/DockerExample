@@ -72,7 +72,7 @@ These instructions, along with others like VOLUME, USER, and LABEL, allow for th
     $ docker build --platform linux/arm64 -t jhebeler/jwhregression:3.0 . 
     $ docker push jhebeler/jwhregression:3.0 
     $ docker run jhebeler/jwhregression:1.0 
-    $ docker run -v /home/jwh/workspace/DockerExample/output:output jhebeler/jwhregression:1:0
+    $ :docker run -v /home/jwh/workspace/DockerExample/output:/output jhebeler/jwhregression:1.0
 ### Common Architectures supported by Docker
     x86-64 / AMD64 (amd64): This is the most prevalent architecture for desktop computers and servers. It's the standard for many cloud providers and data centers.
 
