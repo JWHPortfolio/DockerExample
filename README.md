@@ -22,6 +22,42 @@
     $ docker network ls (list networks)
 
 # Docker Image Building Example
+A Dockerfile is a text file containing instructions for building a Docker image. These instructions are processed sequentially, with each instruction creating a new layer in the image. Key parts of a Dockerfile include: 
+
+• FROM: This instruction specifies the base image from which your new image will be built. It's the starting point for your image and typically defines the operating system and any pre-installed software. 
+
+    FROM ubuntu:latest
+
+• RUN: This instruction executes commands during the image build process. Each RUN instruction creates a new layer. It's used for tasks like installing packages, creating directories, or compiling code. 
+
+    RUN apt-get update && apt-get install -y nginx
+
+• WORKDIR: This instruction sets the working directory for any subsequent RUN, CMD, ENTRYPOINT, COPY, and ADD instructions. 
+
+    WORKDIR /app
+
+• COPY / ADD: These instructions copy files or directories from the build context (the local machine where the Dockerfile is located) into the image. COPY is generally preferred for simple file copying, while ADD offers more features like extracting compressed archives. 
+
+    COPY . .
+
+• EXPOSE: This instruction informs Docker that the container listens on a specified network port at runtime. It's purely for documentation and doesn't actually publish the port. 
+
+    EXPOSE 80
+
+• ENV: This instruction sets environment variables within the image. These variables are available to processes running inside the container. 
+
+    ENV MY_VARIABLE="value"
+
+• CMD: This instruction provides default commands or arguments for an executing container. There can only be one CMD instruction per Dockerfile. If an executable is not specified, ENTRYPOINT can define it. 
+
+    CMD ["nginx", "-g", "daemon off;"]
+
+• ENTRYPOINT: This instruction configures a container to run as an executable. It defines the primary command that will be executed when the container starts. CMD instructions provide default arguments to the ENTRYPOINT. 
+
+    ENTRYPOINT ["java", "-jar"]
+
+These instructions, along with others like VOLUME, USER, and LABEL, allow for the comprehensive definition of a Docker image's environment and behavior. 
+
 
 ## Example to create a docker build 
 
