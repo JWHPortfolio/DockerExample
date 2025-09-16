@@ -9,7 +9,7 @@
     -v ties two files systems together.  Can use a host file system or shared file system
     -p exposes container port to host.  They do not have to be the same port
 
-## Add shared file system
+## Add shared file system - stored in a special area of your host machine (e.g., /var/lib/docker/volumes/ on Linux).
     $ docker volume create my-shared-data
     $ docker run -d --name container1 -v my-shared-data:/data <imageName1>
     $ docker run -d --name container2 -v my-shared-data:/data <imageName2> (could be same image but a different container)
