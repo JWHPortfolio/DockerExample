@@ -73,6 +73,18 @@ These instructions, along with others like VOLUME, USER, and LABEL, allow for th
     $ docker push jhebeler/jwhregression:3.0 
     $ docker run jhebeler/jwhregression:1.0 
     $ docker run -v /home/jwh/workspace/DockerExample/output:output jhebeler/jwhregression:1:0
+### Common Architectures supported by Docker
+    x86-64 / AMD64 (amd64): This is the most prevalent architecture for desktop computers and servers. It's the standard for many cloud providers and data centers.
+
+    ARM64 (arm64 or arm64v8): This architecture has become increasingly popular, particularly with the rise of ARM-based servers (like AWS Graviton), Apple Silicon Macs, and IoT devices like the Raspberry Pi 4.
+
+    ARM (arm or arm32): Used in older Raspberry Pi models and various other mobile and embedded devices. Docker often distinguishes between different versions (e.g., arm/v5, arm/v7).
+
+    PowerPC 64-bit (ppc64le): An architecture used in some high-performance computing and enterprise systems.
+
+    IBM Z / z Systems (s390x): The architecture for IBM's mainframe computers.
+
+    RISC-V 64-bit (riscv64): An open-source instruction set architecture that is gaining traction in various computing areas.
 
 ## for multiple -  Warning after much toil counldn't get this to work!
     $ sudo docker buildx create --name mybuilder --driver docker-container --bootstrap
